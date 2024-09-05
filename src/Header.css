@@ -1,0 +1,74 @@
+.header {
+  background-color: #ffffff; /* Updated color */
+  padding: 10px 0; /* Adjusted padding for better proportions */
+  text-align: center;
+  color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Aligns logo and nav to the ends */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Padding for spacing */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50%; /* Adjusted size */
+  width: 10%; /* Adjusted size */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+  font-size: 2rem; /* Adjusted font size */
+  color: #1c8fac; /* Match the header text color */
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  color: #285a66;
+  margin: 0 15px; /* Spacing between links */
+  text-decoration: none;
+  font-size: 1rem; /* Adjusted font size */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.header-link:hover {
+  color: #f39c12;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.login-button {
+  background-color: #60e249;
+  color: #fff;
+  padding: 8px 16px; /* Adjusted padding for better proportion */
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  text-decoration: none;
+  font-size: 1rem; /* Adjusted font size */
+  display: inline-block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Consistent box shadow */
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #f7fb00;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
