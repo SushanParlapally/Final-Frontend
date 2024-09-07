@@ -26,7 +26,7 @@ body {
 .admin-dashboard {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .dashboard-header {
@@ -47,7 +47,7 @@ body {
 }
 
 .button {
-  background-color: var(--accent-color);
+  background-color: royalblue;
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -68,10 +68,12 @@ body {
   background: #fff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px var(--shadow-color);
+  /* box-shadow: 0 4px 8px var(--shadow-color); */
   margin: 0 auto;
   max-width: 600px;
+  
 }
+
 
 .user-form input, .user-form select {
   width: 100%;
@@ -83,17 +85,14 @@ body {
   transition: border-color var(--transition);
 }
 
-.user-form input:focus, .user-form select:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
+
 
 .user-table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 8px var(--shadow-color);
+  /* box-shadow: 0 4px 8px var(--shadow-color); */
 }
 
 .user-table th, .user-table td {
@@ -103,23 +102,25 @@ body {
 }
 
 .user-table th {
-  background-color: var(--primary-color);
+  background-color: royalblue; /* Changed to royal blue */
   color: #fff;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+}
+
+.user-table tr {
+  background-color: #fff; /* Set a consistent row color */
 }
 
 .user-table tr:nth-child(even) {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Alternating row colors */
 }
 
-.user-table tr:hover {
-  background-color: #e9ecef;
-}
 
 .action-buttons {
   display: flex;
   gap: 0.5rem;
+  justify-content: flex-start;
 }
 
 .edit-button, .delete-button {
@@ -127,16 +128,20 @@ body {
   border: none;
   cursor: pointer;
   font-size: 1rem;
-  color: var(--primary-color);
+  padding: 0.5rem;
 }
 
-.edit-button:hover, .delete-button:hover {
-  color: var(--accent-color);
+.edit-button {
+  color: orange; /* Changed to orange */
+}
+
+.delete-button {
+  color: red; /* Changed to red */
 }
 
 .edit-button::before, .delete-button::before {
   content: '';
-  display: inline-block;
+ 
   width: 20px;
   height: 20px;
   background-size: contain;
@@ -152,7 +157,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23ffffff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'/%3E%3C/svg%3E");
 }
 
-.confirmation-modal {
+/* .confirmation-modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -166,9 +171,9 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition), visibility var(--transition);
-}
+} */
 
-.confirmation-modal.show {
+/* .confirmation-modal.show {
   opacity: 1;
   visibility: visible;
 }
@@ -177,7 +182,7 @@ body {
   margin-bottom: 1rem;
   color: var(--primary-color);
   font-size: 1.25rem;
-}
+} */
 
 .modal-buttons {
   display: flex;
@@ -192,7 +197,7 @@ body {
   cursor: pointer;
   font-weight: 600;
   transition: background-color var(--transition), color var(--transition);
-  background-color: #fff;
+  background-color: #ff0e0e;
   color: var(--primary-color);
 }
 
@@ -209,7 +214,7 @@ body {
   .dashboard-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 10rem;
   }
 
   .user-table {
@@ -221,3 +226,121 @@ body {
     gap: 0.25rem;
   }
 }
+
+.add-user-button button {
+  background-color: rgb(80, 206, 80);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-user-button button:hover {
+  background-color: rgb(154, 242, 46);
+}
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  /* Removed box-shadow and transition */
+}
+
+.user-table th, .user-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  /* Removed transition */
+}
+
+.user-table th {
+  background-color: royalblue; /* Kept royal blue */
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-table tr {
+  background-color: #fff; /* Set a consistent row color */
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f1f1f1; /* Alternating row colors */
+}
+
+/* Removed hover effects from table rows */
+
+/* Styling for the button container */
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+  
+}
+
+/* Action Buttons */
+.edit-button,
+.delete-button {
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.edit-button {
+  background-color:#60e249;
+  color: black;
+  gap: 10px;
+  margin: 10px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  gap: 10px;
+}
+
+.edit-button:hover {
+  background-color: gold;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+/* Add gap between Add User button/form and User Table */
+.add-user-button {
+  margin-bottom: 20px; /* Adjust the value to create the desired gap */
+}
+
+.user-table {
+  margin-top: 20px; /* Optional: Add margin to the top of the table if needed */
+}
+ /* UserForm styles */
+
+.submit-button {
+  background-color: green; /* Green color for the submit button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px; /* Add space between the buttons */
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: darkgreen; /* Darker green on hover */
+}
+
+.close-button {
+  background-color: crimson; /* Crimson color for the close button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+

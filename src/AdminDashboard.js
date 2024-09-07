@@ -93,6 +93,9 @@ const UserForm = ({ user, handleInputChange, buttonText, onSubmit, onClose, role
     )}
   </form>
 );
+<br></br> 
+
+
 
 // UserTable Component
 const UserTable = ({ users, deleteUser, editUser }) => (
@@ -120,14 +123,17 @@ const UserTable = ({ users, deleteUser, editUser }) => (
           <td>{user.manager ? `${user.manager.firstName} ${user.manager.lastName}` : 'N/A'}</td>
           <td>{user.role?.roleName || 'N/A'}</td>
           <td>
-            <button className="edit-button" onClick={() => editUser(user)}>Edit</button>
-            <button className="delete-button" onClick={() => deleteUser(user.userId)}>Delete</button>
+            <div className="button-container">
+             <td> <button className="edit-button" onClick={() => editUser(user)}>Edit</button>
+              <button className="delete-button" onClick={() => deleteUser(user.userId)}>Delete</button></td>
+            </div>
           </td>
         </tr>
       ))}
     </tbody>
   </table>
 );
+
 
 function AdminDashboard() {
   const [users, setUsers] = useState([]);
@@ -177,8 +183,9 @@ function AdminDashboard() {
       const addedUser = response.data;
       setUsers(prevUsers => [addedUser, ...prevUsers]);
       setNewUser({ email: '', roleId: '', firstName: '', lastName: '', departmentId: '', managerId: '', address: '', mobileNum: '', password: '' });
-      setShowAddForm(false);
+      setShowAddForm(false);  // Hide form after adding user
       setMessage('User added successfully.');
+      window.location.reload();
     } catch (error) {
       console.error('Error adding user:', error.response?.data || error.message);
       setMessage('Failed to add user. Please try again.');
@@ -241,21 +248,28 @@ function AdminDashboard() {
     <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
       <div className="message">{message}</div>
-      <div className="add-user-button">
-        <button onClick={() => setShowAddForm(true)}>Add User</button>
-      </div>
+      
+      {/* Show the "Add User" button only when the form is not visible */}
+      {!showAddForm && (
+        <div className="add-user-button">
+          <button onClick={() => setShowAddForm(true)}>Add User</button> <br></br> <br></br>
+        </div>
+      )}
+      
+      {/* Render the form when showAddForm is true */}
       {showAddForm && (
         <UserForm
           user={newUser}
           handleInputChange={handleInputChange}
           buttonText={editMode ? "Update User" : "Add User"}
           onSubmit={editMode ? updateUser : addUser}
-          onClose={() => setShowAddForm(false)}
+          onClose={() => setShowAddForm(false)}  // Hide the form when closed
           roles={roles}
           departments={departments}
           managers={managers}
         />
       )}
+
       <UserTable users={users} deleteUser={deleteUser} editUser={editUser} />
     </div>
   );

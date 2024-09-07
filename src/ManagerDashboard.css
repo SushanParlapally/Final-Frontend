@@ -22,7 +22,7 @@ th, td {
 }
 
 th {
-  background-color: #343a40; /* Darker, more sophisticated header color */
+  /* Darker, more sophisticated header color */
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -31,10 +31,6 @@ th {
 
 tr:nth-child(even) {
   background-color: #f8f9fa; /* Softer, more modern even row color */
-}
-
-tr:hover {
-  background-color: #e2e6ea; /* Subtle hover effect */
 }
 
 button {

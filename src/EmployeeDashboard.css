@@ -1,113 +1,140 @@
-/* EmployeeDashboard Styles */
-.employee-dashboard {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.create-request-button {
-    background-color: #070707;
-    color: rgb(248, 242, 242);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.create-request-button:hover {
-    background-color: #fff;
-}
-
-.travel-request-form-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.travel-request-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.travel-request-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.travel-request-form label {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.travel-request-form input,
-.travel-request-form select,
-.travel-request-form textarea {
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.travel-request-form button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.travel-request-form button:hover {
-    background-color: #218838;
-}
-
-.travel-request-history {
-    margin-top: 20px;
-}
-
-.travel-request-history h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.travel-request-history ul {
-    list-style-type: none;
+/* General Reset */
+* {
+    margin: 0;
     padding: 0;
-}
-
-.travel-request-history li {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-
-.travel-request-history li strong {
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Container */
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
     display: block;
+  }
+  
+  .input, .select, .textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .input:focus, .select:focus, .textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Buttons */
+  .button {
+    background-color: #5594d7;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
     font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    .travel-request-form-container {
-        padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-button {
+    background-color: #ff6b6b;
+  }
+  
+  .close-button:hover {
+    background-color: #e55353;
+  }
+  
+  /* Travel Request History */
+  .history-container {
+    margin-top: 40px;
+    min-width: 100%;
+    
+  }
+  
+  .history-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-item p {
+    margin: 10px 0;
+  }
+  
+  .history-item strong {
+    color: #333;
+  }
+  
+  .history-item .button {
+    background-color: #28a745;
+  }
+  
+  .history-item .button:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form {
+      grid-template-columns: 1fr;
     }
-
-    .travel-request-form button {
-        font-size: 14px;
-        padding: 8px 16px;
+  
+    .button {
+      width: 100%;
     }
-
-    .create-request-button {
-        font-size: 14px;
-        padding: 8px 16px;
+  
+    .history-item {
+      padding: 15px;
     }
-}
+  }
+  

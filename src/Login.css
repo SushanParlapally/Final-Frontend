@@ -1,4 +1,5 @@
-.body {
+/* Body background with image */
+body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -6,26 +7,41 @@
   background: url('./assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #333;
-  
-} 
+}
 
 .MainContainer {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Overlay for better contrast */
+  background: rgba(0, 0, 0, 0.5); /* Overlay */
 }
 
+/* About Container with hover effect */
 .AboutContainer {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f4f4f4; /* Light gray background */
+  background: url('./assets/background.jpg') no-repeat center center fixed;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.AboutContainer:hover {
+  transform: scale(1.05);
+}
+
+/* Image hover effect */
+.AboutImage {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.AboutImage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .LoginWrapper {
@@ -33,12 +49,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem;
 }
 
+/* Enhanced card and button styling */
 .Card {
   background: white;
   border-radius: 8px;
@@ -48,60 +65,27 @@
   width: 100%;
 }
 
-.Title {
-  text-align: center;
-  color: #333;
-  font-size: 2rem; /* Larger font size for better visibility */
-  margin-bottom: 1.5rem;
-}
-
-.InputGroup {
-  margin-bottom: 1.5rem; /* Increased margin for better spacing */
-}
-
-.Label {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: #555; /* Slightly lighter color for better readability */
-}
-
-.Input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-
-.Input:focus {
-  border-color: rgb(251, 113, 133); /* Focus border color */
-  outline: none;
-}
-
 .Button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #0e9e4d; /* Button background color */
+  background-color: #0e9e4d;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1rem; /* Slightly larger font size for emphasis */
+  font-size: 1.1rem;
   margin-top: 1rem;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .Button:hover {
-  background-color: #e91e63; /* Enhanced hover color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  background-color: #e91e63;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ErrorMessage {
   color: red;
   text-align: center;
   margin-top: 1rem;
-  font-size: 0.875rem; /* Smaller font size for error messages */
+  font-size: 0.875rem;
 }

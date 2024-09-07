@@ -10,13 +10,13 @@ table {
 
 th, td {
   padding: 15px; /* Increased padding for better spacing */
-  border: 1px solid #ddd;
+  border: 1px solid #8f1a1a;
   text-align: left;
   transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 th {
-  background-color: #f4f4f4;
+  background-color: #1d89e2;
   font-weight: bold;
 }
 
@@ -28,20 +28,13 @@ tr:nth-child(odd) {
   background-color: #fff;
 }
 
-/* Row Hover Effect */
-tr:hover {
-  background-color: #ececec; /* Light gray on hover */
-  transform: scale(1.02); /* Slight scale effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger box shadow on hover */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
-}
 
 /* Button Styling */
 button {
   margin-right: 5px;
   padding: 10px 15px; /* Increased padding for a better feel */
   border: none;
-  background-color: #000; /* Primary button color */
+  background-color: #237596; /* Primary button color */
   color: white;
   cursor: pointer;
   border-radius: 8px; /* Slightly rounded corners */
@@ -50,7 +43,7 @@ button {
 }
 
 button:hover {
-  background-color: #e83a5d; /* Darker shade on hover */
+  background-color: #3adce8; /* Darker shade on hover */
   transform: translateY(-2px); /* Slight upward movement on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper box shadow on hover */
 }

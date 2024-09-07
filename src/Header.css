@@ -71,4 +71,5 @@
 .login-button:hover {
   background-color: #f7fb00;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  color: #000000;
 }

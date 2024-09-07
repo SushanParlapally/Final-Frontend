@@ -109,6 +109,7 @@ const TravelAdminDashboard = () => {
             await axios.post(`https://localhost:7075/api/travel-requests/${TravelRequestId}/book`, bookingDetails);
             alert('Ticket booked successfully!');
             await fetchTravelRequests(); // Refresh the list
+            window.location.reload();
         } catch (error) {
             console.error('Error booking ticket:', error.response ? error.response.data : error.message);
             alert('Failed to book ticket.');
@@ -131,6 +132,7 @@ const TravelAdminDashboard = () => {
             document.body.appendChild(link);
             link.click();
             link.remove();
+            window.location.reload();
         } catch (error) {
             console.error('Error downloading ticket:', error.response ? error.response.data : error.message);
             alert('Failed to download the ticket.');
@@ -144,6 +146,7 @@ const TravelAdminDashboard = () => {
             await axios.post(`https://localhost:7075/api/TravelAdmin/ReturnToManager/${id}`, { comments });
             alert('Request returned to manager successfully!');
             await fetchTravelRequests(); // Refresh the list
+            window.location.reload();
         } catch (error) {
             console.error('Error returning request to manager:', error.response ? error.response.data : error.message);
             alert('Failed to return request to manager.');
@@ -157,6 +160,7 @@ const TravelAdminDashboard = () => {
             await axios.post(`https://localhost:7075/api/TravelAdmin/ReturnToEmployee/${id}`, { comments });
             alert('Request returned to employee successfully!');
             await fetchTravelRequests(); // Refresh the list
+            window.location.reload();
         } catch (error) {
             console.error('Error returning request to employee:', error.response ? error.response.data : error.message);
             alert('Failed to return request to employee.');
@@ -170,6 +174,7 @@ const TravelAdminDashboard = () => {
             await axios.post(`https://localhost:7075/api/travel-requests/${travelRequestId}/close`, { comments });
             alert('Request closed successfully!');
             await fetchTravelRequests(); // Refresh the list
+            window.location.reload();
         } catch (error) {
             console.error('Error closing request:', error.response ? error.response.data : error.message);
             alert('Failed to close request.');
